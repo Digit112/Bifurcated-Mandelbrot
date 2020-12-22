@@ -1,4 +1,5 @@
-# Crude Engine for rendering the bifurcated Mandelbrot Set.
+# The Bifurcated Mandelbrot Set
+A Crude Engine for rendering a very pretty math thing.
 
 Generates videos of the Bifurcated Mandelbrot Set. An example is given [here](https://www.youtube.com/watch?v=OOiBGJ0QATs).
 The path the camera takes, orbiting the set, is currently the only path. Maybe if someone wants I'll have it follow bezier paths optionally.
