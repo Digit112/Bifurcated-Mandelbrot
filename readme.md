@@ -34,6 +34,7 @@ The mandelbort set is defined as the set of complex numbers such that z remains 
 In other words, you start with z at 0 + 0i on the complex plane, and c at some point. If the point is (1, 2) then c would equal 1 + 2i. You then repeatedly apply the function, assigning the result back to z after each iteration. If z approaches some constant or enters a cycle, then c belongs to the mandelbrot set. If, however, it grows towards infinity, it is not.
 
 For simplicity, we will use real numbers with no imaginary component to simplify the math. (These points lie along the x, or "real" axis)
+
 ![equation](https://latex.codecogs.com/gif.latex?z%3D0&plus;0i%3D0)
 
 ![equation](https://latex.codecogs.com/gif.latex?c%3D1&plus;0i%3D1)
@@ -59,6 +60,7 @@ new_b = 2*a*b;
 ```
 
 Here is another example, which demonstrates one of two ways z may remain bounded.
+
 ![equation](https://latex.codecogs.com/gif.latex?z%3D0&plus;0i%3D0)
 
 ![equation](https://latex.codecogs.com/gif.latex?c%3D-1&plus;0i%3D-1)
