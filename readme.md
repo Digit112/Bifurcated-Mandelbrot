@@ -3,7 +3,7 @@
 Generates videos of the Bifurcated Mandelbrot Set. An example is given [here](https://www.youtube.com/watch?v=OOiBGJ0QATs).
 The path the camera takes, orbiting the set, is currently the only path. Maybe if someone wants I'll have it follow bezier paths optionally.
 
-The Bifurcated Mandelbrot Set is a visualization of the cycles adopted by points on the complex plane under the iterative formula $$z_{n+1}=z_n^2+c$$ for which the Mandelbrot set is defined.
+The Bifurcated Mandelbrot Set is a visualization of the cycles adopted by points on the complex plane under the iterative formula ![equation](https://latex.codecogs.com/gif.latex?z_%7Bn&plus;1%7D%3Dz_n%5E2&plus;c) for which the Mandelbrot set is defined.
 
 ## Programs
 
@@ -29,37 +29,49 @@ My personal vector library.
 
 ## Theory
 
-The mandelbort set is defined as the set of complex numbers such that z remains bounded under repeated iteration of the equation $$z_{n+1} = z_n^2$$ + c where z is initialized to 0 and c is the point being tested.
+The mandelbort set is defined as the set of complex numbers such that z remains bounded under repeated iteration of the equation ![equation](https://latex.codecogs.com/gif.latex?z_%7Bn&plus;1%7D%3Dz_n%5E2&plus;c) where z is initialized to 0 and c is the point being tested.
 
 In other words, you start with z at 0 + 0i on the complex plane, and c at some point. If the point is (1, 2) then c would equal 1 + 2i. You then repeatedly apply the function, assigning the result back to z after each iteration. If z approaches some constant or enters a cycle, then c belongs to the mandelbrot set. If, however, it grows towards infinity, it is not.
 
 For simplicity, we will use real numbers with no imaginary component to simplify the math. (These points lie along the x, or "real" axis)
-$$z = 0 + 0i = 0$$
-$$c = 1 + 0i = 1$$
+![equation](https://latex.codecogs.com/gif.latex?z%3D0&plus;0i%3D0)
 
-$$0^2 + 1 = 1$$
-$$1^2 + 1 = 2$$
-$$2^2 + 1 = 5$$
-$$5^2 + 1 = 26$$
-$$26^2 + 1 = 677$$
+![equation](https://latex.codecogs.com/gif.latex?c%3D1&plus;0i%3D1)
+
+![equation](https://latex.codecogs.com/gif.latex?0%5E2&plus;1%3D1)
+
+![equation](https://latex.codecogs.com/gif.latex?1%5E2&plus;1%3D2)
+
+![equation](https://latex.codecogs.com/gif.latex?2%5E2&plus;1%3D5)
+
+![equation](https://latex.codecogs.com/gif.latex?5%5E2&plus;1%3D26)
+
+![equation](https://latex.codecogs.com/gif.latex?26%5E2&plus;1%3D677)
 
 Because the number approaches infinity, (1, 0) does NOT belong to the Mandelbrot set.
 
-Sidenote, squaring a complex number a + bi looks like this:
-$$(a + bi)^2 = a^2-b^2 + 2abi$$
-So in code, that would just be:
-    new_a = a\*a - b\*b;
-    new_b = 2\*a\*b;
+Sidenote, squaring a complex number a + bi looks like 
+![equation](https://latex.codecogs.com/gif.latex?%28a%20&plus;%20bi%29%5E2%20%3D%20a%5E2-b%5E2%20&plus;%202abi)
+, so in code, that would just be:
+```
+new_a = a*a - b*b;
+new_b = 2*a*b;
+```
 
 Here is another example, which demonstrates one of two ways z may remain bounded.
-$$z = 0 + 0i = 0$$
-$$c = -1 + 0i = -1$$
+![equation](https://latex.codecogs.com/gif.latex?z%3D0&plus;0i%3D0)
 
-$$0^2 + -1 = -1$$
-$$-1^2 + -1 = 0$$
-$$0^2 + -1 = -1$$
-$$-1^2 + -1 = 0$$
-$$0^2 + -1 = -1$$
+![equation](https://latex.codecogs.com/gif.latex?c%3D-1&plus;0i%3D-1)
+
+![equation](https://latex.codecogs.com/gif.latex?0%5E2&plus;-1%3D-1)
+
+![equation](https://latex.codecogs.com/gif.latex?-1%5E2&plus;-1%3D0)
+
+![equation](https://latex.codecogs.com/gif.latex?0%5E2&plus;-1%3D-1)
+
+![equation](https://latex.codecogs.com/gif.latex?-1%5E2&plus;-1%3D0)
+
+![equation](https://latex.codecogs.com/gif.latex?0%5E2&plus;-1%3D-1)
 
 Clearly, this results in a cycle. Normally, simply seeing the mandelbrot set can be interesting, but what about also seeing the cycles that various points adopt?
 
