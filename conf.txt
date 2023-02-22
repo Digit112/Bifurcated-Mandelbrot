@@ -1,0 +1,13 @@
+// The width and height of the sampling grid.
+sample_width 20480
+sample_height 20480
+
+// Number of iterations per sample.
+sample_iters 32000
+
+// The number of frames to render.
+frames 384
+
+// The width and height of the output.
+output_width 3840
+output_height 2160
